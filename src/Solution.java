@@ -15,9 +15,9 @@ public class Solution {
         // Why set? Because our lookup time will be faster
         Set<String> wordSet = new HashSet<>(wordDict);
 
-        for (int i = 1; i < s.length(); i++) {
-            for (int j = 0; j < i; j++) {
-                if (dp[j] && wordSet.contains(s.substring(j, i))) {
+        for(int i=1; i<=s.length(); i++){
+            for(int j=i-1; j>=0; j-- ){
+                if(dp[j] && wordSet.contains(s.substring(j,i))){
                     dp[i] = true;
                     break;
                 }

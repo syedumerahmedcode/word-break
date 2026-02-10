@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");
@@ -28,5 +31,12 @@ public class App {
          * Output: false
          * 
          */
+        String s = "applepenapple";
+        List<String> wordDict = new ArrayList<>();
+        wordDict.add("apple");
+        wordDict.add("pen");
+        Solution solution = new Solution();
+        boolean result = solution.wordBreak(s, wordDict);
+        System.out.println("if s can be segmented into a space-separated sequence of one or more dictionary words: "+result);
     }
 }
